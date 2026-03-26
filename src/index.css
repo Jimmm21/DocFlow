@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-primary: #0EA5E9; /* Sky-500 */
+  --color-secondary: #1F2937; /* Gray-800 */
+  --color-sky-blue: #F0F9FF; /* Sky-50 */
+  --color-sky-blue-accent: #0EA5E9; /* Sky-500 */
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-white text-slate-900 transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-[12px] shadow-sm border border-slate-200 p-6;
+  }
+  
+  .btn-primary {
+    @apply bg-primary hover:bg-sky-600 text-white font-semibold py-2 px-4 rounded-[12px] transition-all active:scale-95;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary hover:bg-slate-700 text-white font-semibold py-2 px-4 rounded-[12px] transition-all active:scale-95;
+  }
+  
+  .status-badge {
+    @apply px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  
+  .status-pending {
+    @apply bg-yellow-100 text-yellow-800;
+  }
+  
+  .status-approved {
+    @apply bg-green-100 text-green-800;
+  }
+  
+  .status-rejected {
+    @apply bg-red-100 text-red-800;
+  }
+}

@@ -1,0 +1,9 @@
+import os
+
+DATABASE_URL = os.getenv("DATABASE_URL", "")
+CORS_ORIGINS = os.getenv("CORS_ORIGINS", "*")
+GOOGLE_CLIENT_ID = os.getenv("GOOGLE_CLIENT_ID", "")
+GOOGLE_CLIENT_SECRET = os.getenv("GOOGLE_CLIENT_SECRET", "")
+GOOGLE_REDIRECT_URI = os.getenv("GOOGLE_REDIRECT_URI", "")
+GOOGLE_OAUTH_STATE_SECRET = os.getenv("GOOGLE_OAUTH_STATE_SECRET", "")
+FRONTEND_URL = os.getenv("FRONTEND_URL", "http://localhost:3000")
